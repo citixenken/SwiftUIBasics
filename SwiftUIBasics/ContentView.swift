@@ -9,14 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Color.red
-                .ignoresSafeArea()
-            Color.green
-                .padding(50)
-            Color.blue
-                .padding(100)
-            Text("Primary colors")
+        VStack(alignment: .leading, spacing: 10) {
+            Text("I love SwiftUI")
+                .font(.largeTitle)
+                .foregroundColor(.accentColor)
+            Text("SwiftUI makes developing iOS apps so easy and fun!")
+            
+            Button(action: { print("Show logo...")}) {
+                Text("Click here to show logo!")
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .cornerRadius(20)
+        }
+        .frame(width: 300, height: 100)
+        
         }
     }
 }
